@@ -85,6 +85,14 @@ used for RC-mode sensing. There is a voltage reference
 supplied to the other comparator pin in case the internal
 reference doesn't work out.
 
+## Tools
+
+This board was designed with a recent release (2015-06-09
+BZR 5726) of [KiCAD](http://kicad-pcb.org). Because it uses
+some new KiCAD features, it is likely that building from
+source will be necessary. The latest Debian version of KiCAD
+is not new enough.
+
 ## Status
 
 This board is currently undergoing final review before being
