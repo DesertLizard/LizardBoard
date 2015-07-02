@@ -124,17 +124,6 @@ F 3 "" H 3900 3300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SPEAKER SP1
-U 1 1 557619D2
-P 5050 4700
-F 0 "SP1" H 4950 4950 70  0000 C CNN
-F 1 "SPEAKER" H 4950 4450 70  0000 C CNN
-F 2 "pui-at-1224-twt-5v-2-r:PUI-AT-1224-TWT-5V-2-R" H 5050 4700 60  0001 C CNN
-F 3 "~" H 5050 4700 60  0000 C CNN
-	1    5050 4700
-	1    0    0    -1  
-$EndComp
-$Comp
 L C C3
 U 1 1 55761BB9
 P 4550 4600
@@ -447,4 +436,15 @@ Text Notes 6660 7735 0    60   ~ 0
 Desert Lizard Board
 Text Notes 6350 7200 0    60   ~ 0
 Copyright © 2015 Bart Massey\nhttp://github.com/BartMassey/lizard.com\nOpen Hardware: See repo for license terms
+$Comp
+L SPEAKER SP1
+U 1 1 5594E1AE
+P 5050 4700
+F 0 "SP1" H 4950 4950 50  0000 C CNN
+F 1 "SPEAKER" H 4950 4450 50  0000 C CNN
+F 2 "pui-at-1224-twt-5v-2-r:PUI-AT-1224-TWT-5V-2-R" H 5050 4700 60  0001 C CNN
+F 3 "" H 5050 4700 60  0000 C CNN
+	1    5050 4700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
