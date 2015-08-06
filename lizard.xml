@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/bart/prj/pcb/kicad/lizard.new/lizard.sch</source>
-    <date>Thu 11 Jun 2015 11:03:41 PM PDT</date>
+    <source>/home/bart/prj/pcb/kicad/lizard/lizard.sch</source>
+    <date>Wed 05 Aug 2015 09:51:04 PM PDT</date>
     <tool>Eeschema (2015-06-09 BZR 5726)-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -33,34 +33,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>557603AA</tstamp>
     </comp>
-    <comp ref="C1">
-      <value>1u</value>
-      <footprint>Capacitors_SMD:C_1206</footprint>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5576189A</tstamp>
-    </comp>
-    <comp ref="C2">
-      <value>100n</value>
-      <footprint>Capacitors_SMD:C_1206</footprint>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>557618A9</tstamp>
-    </comp>
-    <comp ref="SP1">
-      <value>SPEAKER</value>
-      <footprint>pui-at-1224-twt-5v-2-r:PUI-AT-1224-TWT-5V-2-R</footprint>
-      <libsource lib="device" part="SPEAKER"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>557619D2</tstamp>
-    </comp>
-    <comp ref="C3">
-      <value>22u</value>
-      <footprint>Capacitors_SMD:C_1206</footprint>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>55761BB9</tstamp>
-    </comp>
     <comp ref="R4">
       <value>1M</value>
       <footprint>Resistors_SMD:R_1206</footprint>
@@ -84,24 +56,17 @@
     </comp>
     <comp ref="D1">
       <value>LED RED</value>
-      <footprint>osram-m676:OSRAM-M676</footprint>
+      <footprint>LEDs:LED-1206</footprint>
       <libsource lib="device" part="LED"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>557668D5</tstamp>
     </comp>
     <comp ref="D2">
       <value>LED GRN</value>
-      <footprint>osram-m676:OSRAM-M676</footprint>
+      <footprint>LEDs:LED-1206</footprint>
       <libsource lib="device" part="LED"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>557668E4</tstamp>
-    </comp>
-    <comp ref="R5">
-      <value>4.7M</value>
-      <footprint>Resistors_SMD:R_1206</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>55767E3F</tstamp>
     </comp>
     <comp ref="BT1">
       <value>BATTERY</value>
@@ -109,13 +74,6 @@
       <libsource lib="battery" part="BATTERY"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>55778528</tstamp>
-    </comp>
-    <comp ref="R6">
-      <value>10K</value>
-      <footprint>Resistors_SMD:R_1206</footprint>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>557A476B</tstamp>
     </comp>
     <comp ref="C5">
       <value>TC2</value>
@@ -145,33 +103,57 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>557A8502</tstamp>
     </comp>
+    <comp ref="SP1">
+      <value>SPEAKER</value>
+      <footprint>pui-at-1224-twt-5v-2-r:PUI-AT-1224-TWT-5V-2-R</footprint>
+      <libsource lib="device" part="SPEAKER"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5594E1AE</tstamp>
+    </comp>
   </components>
   <libparts>
-    <libpart lib="tc" part="TC">
-      <aliases>
-        <alias>TOUCH_CAPACITOR</alias>
-      </aliases>
+    <libpart lib="device" part="LED">
       <footprints>
-        <fp>SM*</fp>
-        <fp>C?</fp>
-        <fp>C1-1</fp>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
       </footprints>
       <fields>
-        <field name="Reference">C</field>
-        <field name="Value">TC</field>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="battery" part="BATTERY">
+    <libpart lib="device" part="SPEAKER">
       <fields>
-        <field name="Reference">BT</field>
-        <field name="Value">BATTERY</field>
+        <field name="Reference">SP</field>
+        <field name="Value">SPEAKER</field>
       </fields>
       <pins>
-        <pin num="1" name="~" type="power_out"/>
-        <pin num="2" name="~" type="power_out"/>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
       </pins>
     </libpart>
     <libpart lib="conn" part="CONN_01X04">
@@ -211,70 +193,41 @@
         <pin num="16" name="P0.3" type="output"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="LED">
+    <libpart lib="tc" part="TC">
+      <aliases>
+        <alias>TOUCH_CAPACITOR</alias>
+      </aliases>
       <footprints>
-        <fp>LED-3MM</fp>
-        <fp>LED-5MM</fp>
-        <fp>LED-10MM</fp>
-        <fp>LED-0603</fp>
-        <fp>LED-0805</fp>
-        <fp>LED-1206</fp>
-        <fp>LEDV</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED</field>
-      </fields>
-      <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="SPEAKER">
-      <fields>
-        <field name="Reference">SP</field>
-        <field name="Value">SPEAKER</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="input"/>
-        <pin num="2" name="2" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="R">
-      <description>Resistor</description>
-      <footprints>
-        <fp>R_*</fp>
-        <fp>Resistor_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="C">
-      <description>Unpolarized capacitor</description>
-      <footprints>
+        <fp>SM*</fp>
         <fp>C?</fp>
-        <fp>C_????_*</fp>
-        <fp>C_????</fp>
-        <fp>SMD*_c</fp>
-        <fp>Capacitor*</fp>
+        <fp>C1-1</fp>
       </footprints>
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">C</field>
+        <field name="Value">TC</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="battery" part="BATTERY">
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">BATTERY</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="power_out"/>
+        <pin num="2" name="~" type="power_out"/>
       </pins>
     </libpart>
   </libparts>
   <libraries>
+    <library logical="device">
+      <uri>/usr/local/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/local/share/kicad/library/conn.lib</uri>
+    </library>
     <library logical="efm8bb">
       <uri>efm8bb.lib</uri>
     </library>
@@ -284,73 +237,60 @@
     <library logical="battery">
       <uri>battery.lib</uri>
     </library>
-    <library logical="device">
-      <uri>/usr/local/share/kicad/library/device.lib</uri>
-    </library>
-    <library logical="conn">
-      <uri>/usr/local/share/kicad/library/conn.lib</uri>
-    </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(P1-Pad1)">
-      <node ref="P1" pin="1"/>
-      <node ref="U1" pin="7"/>
-    </net>
-    <net code="2" name="GND">
-      <node ref="C1" pin="2"/>
-      <node ref="P1" pin="3"/>
-      <node ref="D1" pin="1"/>
-      <node ref="U1" pin="4"/>
-      <node ref="R4" pin="2"/>
-      <node ref="C2" pin="2"/>
-      <node ref="D2" pin="1"/>
-      <node ref="BT1" pin="2"/>
-      <node ref="R5" pin="2"/>
-      <node ref="R7" pin="2"/>
-    </net>
-    <net code="3" name="Net-(C5-Pad1)">
-      <node ref="R7" pin="1"/>
-      <node ref="C5" pin="1"/>
-      <node ref="U1" pin="10"/>
-    </net>
-    <net code="4" name="Net-(C3-Pad1)">
-      <node ref="C3" pin="1"/>
+    <net code="1" name="Net-(SP1-Pad1)">
       <node ref="U1" pin="16"/>
-    </net>
-    <net code="5" name="Net-(C3-Pad2)">
-      <node ref="C3" pin="2"/>
       <node ref="SP1" pin="1"/>
     </net>
-    <net code="6" name="Net-(P1-Pad2)">
-      <node ref="U1" pin="6"/>
-      <node ref="R6" pin="1"/>
-      <node ref="P1" pin="2"/>
+    <net code="2" name="Net-(R3-Pad2)">
+      <node ref="U1" pin="13"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R4" pin="1"/>
     </net>
-    <net code="7" name="Net-(R1-Pad2)">
-      <node ref="U1" pin="9"/>
+    <net code="3" name="Net-(R1-Pad2)">
       <node ref="R1" pin="2"/>
+      <node ref="U1" pin="9"/>
     </net>
-    <net code="8" name="Net-(R2-Pad2)">
+    <net code="4" name="Net-(R2-Pad2)">
       <node ref="R2" pin="2"/>
       <node ref="U1" pin="8"/>
     </net>
-    <net code="9" name="Net-(R3-Pad2)">
-      <node ref="R4" pin="1"/>
-      <node ref="R3" pin="2"/>
-      <node ref="U1" pin="13"/>
-    </net>
-    <net code="10" name="VDD">
+    <net code="5" name="VDD">
       <node ref="BT1" pin="1"/>
-      <node ref="R6" pin="2"/>
-      <node ref="C1" pin="1"/>
-      <node ref="C2" pin="1"/>
       <node ref="R3" pin="1"/>
       <node ref="P1" pin="4"/>
       <node ref="U1" pin="5"/>
     </net>
-    <net code="11" name="Net-(SP1-Pad2)">
-      <node ref="U1" pin="1"/>
+    <net code="6" name="Net-(SP1-Pad2)">
       <node ref="SP1" pin="2"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="7" name="GND">
+      <node ref="R4" pin="2"/>
+      <node ref="P1" pin="3"/>
+      <node ref="BT1" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="D1" pin="1"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="8" name="Net-(P1-Pad2)">
+      <node ref="P1" pin="2"/>
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="9" name="Net-(P1-Pad1)">
+      <node ref="P1" pin="1"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="10" name="Net-(C5-Pad1)">
+      <node ref="R7" pin="2"/>
+      <node ref="U1" pin="10"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="11" name="Net-(C4-Pad1)">
+      <node ref="C4" pin="1"/>
+      <node ref="U1" pin="11"/>
+      <node ref="R7" pin="1"/>
     </net>
     <net code="12" name="Net-(D1-Pad2)">
       <node ref="D1" pin="2"/>
@@ -359,11 +299,6 @@
     <net code="13" name="Net-(D2-Pad2)">
       <node ref="R1" pin="1"/>
       <node ref="D2" pin="2"/>
-    </net>
-    <net code="14" name="Net-(C4-Pad1)">
-      <node ref="U1" pin="11"/>
-      <node ref="R5" pin="1"/>
-      <node ref="C4" pin="1"/>
     </net>
   </nets>
 </export>
