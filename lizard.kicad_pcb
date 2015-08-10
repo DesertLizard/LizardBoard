@@ -1,11 +1,11 @@
-(kicad_pcb (version 4) (host pcbnew "(2015-06-09 BZR 5726)-product")
+(kicad_pcb (version 4) (host pcbnew "(2015-08-06 BZR 6058)-product")
 
   (general
     (links 20)
     (no_connects 0)
-    (area 113.699999 91.699999 128.550001 148.050001)
+    (area 109.574999 87.874999 256.578571 200.3)
     (thickness 1.6)
-    (drawings 14)
+    (drawings 16)
     (tracks 89)
     (zones 0)
     (modules 11)
@@ -458,6 +458,12 @@
       (net 16 "Net-(SP1-Pad1)"))
   )
 
+  (gr_text C (at 121.5 102.5) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
+  (gr_text + (at 121.5 105.5) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_line (start 126.75 91.75) (end 116 91.75) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 126.75 139.75) (end 126.75 91.75) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 128.5 139.75) (end 126.75 139.75) (angle 90) (layer Edge.Cuts) (width 0.1))
