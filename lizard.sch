@@ -129,7 +129,7 @@ U 1 1 55778528
 P 3650 4350
 F 0 "BT1" H 3750 4400 50  0000 L CNN
 F 1 "BATTERY" H 3750 4300 50  0000 L CNN
-F 2 "mpd-bu2032-sm:MPD-BU2032-SM" V 3650 4390 60  0001 C CNN
+F 2 "linx-bat-hld-001:linx-bat-hld-001" V 3650 4390 60  0001 C CNN
 F 3 "" V 3650 4390 60  0000 C CNN
 	1    3650 4350
 	1    0    0    -1  
@@ -215,8 +215,8 @@ F 3 "" H 4850 3500 60  0000 C CNN
 	1    4850 3500
 	1    0    0    -1  
 $EndComp
-Text Notes 9850 7850 0    60   ~ 0
-v1.0b
+Text Notes 9900 7850 0    60   ~ 0
+v1.0c
 $Comp
 L CONN_02X05 P1
 U 1 1 55C30AD8

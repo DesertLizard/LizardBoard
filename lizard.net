@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/bart/prj/pcb/kicad/lizard/lizard.sch)
-    (date "Sat 08 Aug 2015 01:37:49 AM PDT")
+    (date "Tue 11 Aug 2015 11:30:21 PM PDT")
     (tool "Eeschema (2015-06-09 BZR 5726)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -47,7 +47,7 @@
       (tstamp 557668E4))
     (comp (ref BT1)
       (value BATTERY)
-      (footprint mpd-bu2032-sm:MPD-BU2032-SM)
+      (footprint linx-bat-hld-001:linx-bat-hld-001)
       (libsource (lib battery) (part BATTERY))
       (sheetpath (names /) (tstamps /))
       (tstamp 55778528))
