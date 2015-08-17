@@ -3,7 +3,7 @@
   (general
     (links 19)
     (no_connects 1)
-    (area 115.449999 99.699999 126.550001 143.550001)
+    (area 109.107857 95.374999 211.678576 181.3)
     (thickness 1.6)
     (drawings 10)
     (tracks 82)
@@ -65,7 +65,7 @@
     (mod_edge_width 0.15)
     (mod_text_size 1 1)
     (mod_text_width 0.15)
-    (pad_size 4 4)
+    (pad_size 14 11)
     (pad_drill 0)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 115.5 99.75)
@@ -377,7 +377,7 @@
       (net 11 "Net-(SP1-Pad1)"))
   )
 
-  (module linx-bat-hld-001:linx-bat-hld-001 (layer B.Cu) (tedit 55D13513) (tstamp 55CAE87A)
+  (module linx-bat-hld-001:linx-bat-hld-001 (layer B.Cu) (tedit 55D1391C) (tstamp 55CAE87A)
     (at 120.9 121.5 90)
     (path /55778528)
     (fp_text reference BT1 (at 0 -10.16 90) (layer B.SilkS) hide
@@ -386,7 +386,7 @@
     (fp_text value BATTERY (at 0 10.16 90) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (pad 2 smd rect (at 0 0 90) (size 4 4) (layers B.Cu B.Paste B.Mask)
+    (pad 2 smd rect (at 0 0 90) (size 14 11) (layers B.Cu B.Paste B.Mask)
       (net 2 GND))
     (pad 1 smd rect (at -11.45 0 90) (size 2.5 5.1) (layers B.Cu B.Paste B.Mask)
       (net 1 VDD))
@@ -533,24 +533,4 @@
   (segment (start 121.6 139.3) (end 118.2 139.3) (width 0.25) (layer F.Cu) (net 13) (tstamp 55D12D0B))
   (segment (start 122.28 139.98) (end 121.6 139.3) (width 0.25) (layer F.Cu) (net 13) (tstamp 55D12D03))
 
-  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 55D1346C) (hatch edge 0.508)
-    (connect_pads yes (clearance 0.508))
-    (min_thickness 0.254)
-    (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
-    (polygon
-      (pts
-        (xy 123.6 112.8) (xy 125.2 113.6) (xy 126.5 114.5) (xy 126.5 128.6) (xy 126.3 128.7)
-        (xy 125 129.6) (xy 122.9 130.3) (xy 121.5 130.5) (xy 119.5 130.4) (xy 117.9 130)
-        (xy 116.7 129.5) (xy 115.5 128.7) (xy 115.5 114.3) (xy 116.6 113.6) (xy 118.2 112.9)
-        (xy 121.2 112.5) (xy 123.6 112.8)
-      )
-    )
-    (filled_polygon
-      (pts
-        (xy 123.562661 112.923321) (xy 125.13513 113.709555) (xy 125.815 114.180234) (xy 125.815 128.881304) (xy 124.942628 129.485254)
-        (xy 122.870704 130.175895) (xy 121.494137 130.372548) (xy 119.518747 130.273778) (xy 117.94005 129.879104) (xy 116.760205 129.387502)
-        (xy 116.185 129.004032) (xy 116.185 114.014625) (xy 116.659899 113.712417) (xy 118.234516 113.023522) (xy 121.200526 112.628054)
-      )
-    )
-  )
 )
