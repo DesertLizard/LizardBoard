@@ -37,10 +37,10 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date "Thu 11 Jun 2015"
-Rev ""
-Comp ""
+Title "Desert Lizard"
+Date "Sun 16 Aug 2015"
+Rev "1.1"
+Comp "Bart Massey"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -178,10 +178,8 @@ F 3 "" H 5450 3900 60  0000 C CNN
 	1    5450 3800
 	1    0    0    -1  
 $EndComp
-Text Notes 6660 7735 0    60   ~ 0
-Desert Lizard Board
 Text Notes 6350 7200 0    60   ~ 0
-Copyright © 2015 Bart Massey\nhttp://github.com/BartMassey/lizard.com\nOpen Hardware: See repo for license terms
+Copyright © 2015 Bart Massey\nhttp://github.com/DesertLizard/LizardBoard\nOpen Hardware: See repo for license terms
 $Comp
 L SPEAKER SP1
 U 1 1 5594E1AE
@@ -196,36 +194,12 @@ $EndComp
 $Comp
 L VDD #PWR04
 U 1 1 55C2E030
-P 4850 3400
-F 0 "#PWR04" H 4850 3250 50  0001 C CNN
-F 1 "VDD" H 4850 3550 50  0000 C CNN
-F 2 "" H 4850 3400 60  0000 C CNN
-F 3 "" H 4850 3400 60  0000 C CNN
-	1    4850 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR05
-U 1 1 55C2E190
-P 4850 3500
-F 0 "#PWR05" H 4850 3250 50  0001 C CNN
-F 1 "GND" H 4850 3350 50  0000 C CNN
-F 2 "" H 4850 3500 60  0000 C CNN
-F 3 "" H 4850 3500 60  0000 C CNN
-	1    4850 3500
-	1    0    0    -1  
-$EndComp
-Text Notes 9900 7850 0    60   ~ 0
-v1.0c
-$Comp
-L CONN_02X05 P1
-U 1 1 55C30AD8
-P 4150 3200
-F 0 "P1" H 4150 3500 50  0000 C CNN
-F 1 "SW DBG" H 4150 2900 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 4150 2000 60  0001 C CNN
-F 3 "" H 4150 2000 60  0000 C CNN
-	1    4150 3200
+P 4850 3350
+F 0 "#PWR04" H 4850 3200 50  0001 C CNN
+F 1 "VDD" H 4850 3500 50  0000 C CNN
+F 2 "" H 4850 3350 60  0000 C CNN
+F 3 "" H 4850 3350 60  0000 C CNN
+	1    4850 3350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -257,60 +231,47 @@ Wire Wire Line
 Wire Wire Line
 	6100 4200 6450 4200
 Connection ~ 6300 4200
-$Comp
-L GND #PWR06
-U 1 1 55C30E54
-P 4550 3000
-F 0 "#PWR06" H 4550 2750 50  0001 C CNN
-F 1 "GND" H 4550 2850 50  0000 C CNN
-F 2 "" H 4550 3000 60  0000 C CNN
-F 3 "" H 4550 3000 60  0000 C CNN
-	1    4550 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR07
-U 1 1 55C30E82
-P 3750 3100
-F 0 "#PWR07" H 3750 2850 50  0001 C CNN
-F 1 "GND" H 3750 2950 50  0000 C CNN
-F 2 "" H 3750 3100 60  0000 C CNN
-F 3 "" H 3750 3100 60  0000 C CNN
-	1    3750 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR08
-U 1 1 55C30EB0
-P 3900 3400
-F 0 "#PWR08" H 3900 3150 50  0001 C CNN
-F 1 "GND" H 3900 3250 50  0000 C CNN
-F 2 "" H 3900 3400 60  0000 C CNN
-F 3 "" H 3900 3400 60  0000 C CNN
-	1    3900 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 3100 3750 3100
-Wire Wire Line
-	4400 3400 4850 3400
-Wire Wire Line
-	4850 3600 3800 3600
-Wire Wire Line
-	3800 3600 3800 3300
-Wire Wire Line
-	3800 3300 3900 3300
-Wire Wire Line
-	4850 3700 4450 3700
-Wire Wire Line
-	4450 3700 4450 3100
-Wire Wire Line
-	4450 3100 4400 3100
-Wire Wire Line
-	4400 3000 4550 3000
-NoConn ~ 3900 3000
-NoConn ~ 3900 3200
-NoConn ~ 4400 3200
-NoConn ~ 4400 3300
 NoConn ~ 6100 3750
+$Comp
+L CONN_01X04 P1
+U 1 1 55D12E43
+P 4200 3300
+F 0 "P1" H 4200 3550 50  0000 C CNN
+F 1 "DEBUG" V 4300 3300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 4200 3300 60  0001 C CNN
+F 3 "" H 4200 3300 60  0000 C CNN
+	1    4200 3300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4850 3500 4400 3500
+Wire Wire Line
+	4400 3500 4400 3450
+Wire Wire Line
+	4850 3350 4400 3350
+Wire Wire Line
+	4600 3600 4600 3250
+Wire Wire Line
+	4600 3250 4400 3250
+Wire Wire Line
+	4850 3700 4700 3700
+Wire Wire Line
+	4700 3700 4700 3150
+Wire Wire Line
+	4700 3150 4400 3150
+Wire Wire Line
+	4850 3600 4600 3600
+$Comp
+L GND #PWR?
+U 1 1 55D13023
+P 4400 3500
+F 0 "#PWR?" H 4400 3250 50  0001 C CNN
+F 1 "GND" H 4400 3350 50  0000 C CNN
+F 2 "" H 4400 3500 60  0000 C CNN
+F 3 "" H 4400 3500 60  0000 C CNN
+	1    4400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3350 4850 3400
 $EndSCHEMATC
